@@ -28,17 +28,13 @@
           <img src="./images/download.jpeg" alt="sphere" width="250" />
         </div>
         <div class="page-content-php">
-          <form action="answer.php" method="POST">
-            <p>Radius</p>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="radius">
-              <label class="mdl-textfield__label" for="radius_input">enter...</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <br />
-            <!-- Accent-colored raised button with ripple -->
-            <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-          </form>
+          <div id="user-info">
+            <?php
+              $radius = $_POST["radius"];
+              $volume = 4/3 * pi() * pow($radius, 3);
+              echo "V = " . round($volume, 2) . "u<sup>3</sup>";
+            ?>
+          </div>
         </div>
       </main>
     </div>
