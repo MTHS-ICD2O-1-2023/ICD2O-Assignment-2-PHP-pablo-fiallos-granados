@@ -32,7 +32,7 @@
             <?php
               $radius = $_POST["radius"];
               $volume = 4/3 * pi() * pow($radius, 3);
-              echo "V = " . round($volume, 2) . "u<sup>3</sup>";
+              echo "V = " . round($volume, 2) . "u <sup>3</sup>";
             ?>
           </div>
         </div>
